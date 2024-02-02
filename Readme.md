@@ -1,4 +1,4 @@
-![Screenshot (22)](https://github.com/ompateldeveloper/learn-sql/assets/115335915/0f49d3b3-1bfb-4898-ac9d-f7f452df6f0a)# SQL
+# SQL
 Structured QUery Language is language to make modification in databse, we can perfiorm CRUD operatrion using Databses.
 ## Advantages
 - Sharing : we can us this on different platform.

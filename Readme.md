@@ -1,4 +1,4 @@
-# SQL
+![Screenshot (22)](https://github.com/ompateldeveloper/learn-sql/assets/115335915/0f49d3b3-1bfb-4898-ac9d-f7f452df6f0a)# SQL
 Structured QUery Language is language to make modification in databse, we can perfiorm CRUD operatrion using Databses.
 ## Advantages
 - Sharing : we can us this on different platform.
@@ -49,5 +49,7 @@ Data is stored through means of predefined proper models.
   - Guranteed Access : Each piece of data should be accesible by TableName, PrimaryKey, Attribute
   - Systematic Treatment of NULL :
   - Active On-Line Catalog : every database must have catalog table , info of every table should be stored in it.
-  - Powerful Language :  ex. SQL 
+  - Powerful Language :  ex. SQL
+![all codd's rules](https://github.com/ompateldeveloper/learn-sql/assets/115335915/112ef8e4-2bfd-435f-9b9d-26f71d18ae91)
+
    

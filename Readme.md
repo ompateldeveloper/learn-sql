@@ -18,8 +18,20 @@ Structured QUery Language is language to make modification in databse, we can pe
    - Unstructured: Undefined database in the form of Binary Files, like Videos, Images, Txt files etc.
    - Semi-Structured: I has both defined rules but it also stores Binary data files or Metadata realted to it.
    - XML: Extensible markup Language, It is Tag Description language, Represent Data in Tag format like html , this supports semi-structured database system
-## Data Modal : Data is stored through means of predefined proper models.
+## Data Modal 
+Data is stored through means of predefined proper models.
    Types:
-   - Record Based Data Model : 
-   - Object Based Data Model : 
-   
+   - Record Based Data Model : It has fixed no of fields in table ex. RDBMS,DBMS
+        - File Management System : sequential data stored in file like excel or csv, cons: data is not indexed,no security
+        - Hierarchical model : collection of records in hierarchical manners. Transactional database subscribes toMaster database. cons: Redunduncy
+        - Network Model : It has nework of database , basically like pointers in programming.
+        - Relational Model (RDBMS) : Best Adopted model so far . pros: security, accesability.
+   - Object Based Data Model : Everythig is based on the objects thats are defined as models. ex. MongoDB, Cassandra
+
+## Terminologies in Database
+1. Database : collection of Tables
+2. Table : Collection of Tuples and Attributes
+3. Attribute : Acolumn of Table
+4. Tuple : Row Of table
+## Normalization in database
+   - 

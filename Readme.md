@@ -1,4 +1,4 @@
-#SQL
+# SQL
 Structured QUery Language is language to make modification in databse, we can perfiorm CRUD operatrion using Databses.
 ## Advantages
 - Sharing : we can us this on different platform.

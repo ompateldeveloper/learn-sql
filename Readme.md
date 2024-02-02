@@ -60,5 +60,10 @@ Data is stored through means of predefined proper models.
   - Postgres SQL
 ## SQL Command set
 ![SQL command set](https://github.com/ompateldeveloper/learn-sql/assets/115335915/4e18efeb-a88a-4c57-b082-75bb8d40ef44)
-
-
+### Data Types in oracle 
+- number : 1-32 digits
+- char : alphanumeric 1-2000 characters
+- varchar2 : alphanumeric , 1-4000 characters
+- Date : it accepts Date data type in format dd/mm/yy from 1-jan-4712ad to 31-dec-4712ad
+- long : Max length of 2GB
+- 

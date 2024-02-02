@@ -44,4 +44,10 @@ Data is stored through means of predefined proper models.
    3. 3rd normal form:
       - 2nd NF should be satisfied 
       - eliminate fields which do not depend on primary key
+## Codd's Rules
+  - Information Rule : Every table should have valid MetaData and rows & columns should strictly unordered.
+  - Guranteed Access : Each piece of data should be accesible by TableName, PrimaryKey, Attribute
+  - Systematic Treatment of NULL :
+  - Active On-Line Catalog : every database must have catalog table , info of every table should be stored in it.
+  - Powerful Language :  ex. SQL 
    

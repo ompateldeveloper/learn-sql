@@ -66,4 +66,8 @@ Data is stored through means of predefined proper models.
 - varchar2 : alphanumeric , 1-4000 characters
 - Date : it accepts Date data type in format dd/mm/yy from 1-jan-4712ad to 31-dec-4712ad
 - long : Max length of 2GB
-- 
+## Commands in SQL 
+  1. DCL
+     - Create new User: CREATE USER username IDENTIFIED BY password.
+     - Granting permission to a User: GRANT CONNECT,RESOURCES,DBA TO username.
+     

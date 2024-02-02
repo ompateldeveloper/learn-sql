@@ -13,3 +13,13 @@ Structured QUery Language is language to make modification in databse, we can pe
    - Distributed Database : distributed over different location
    - Operational Database : supports company's day-to-day operations,Transactional or production database.
    - Data warehouse : Stores Data for tactial or Strategic descisions
+3. Based on structure:
+   - Structured: Defined rules for storing, data stored in structure manner, ex. specific data in the form of numbers, types and names and stuff.
+   - Unstructured: Undefined database in the form of Binary Files, like Videos, Images, Txt files etc.
+   - Semi-Structured: I has both defined rules but it also stores Binary data files or Metadata realted to it.
+   - XML: Extensible markup Language, It is Tag Description language, Represent Data in Tag format like html , this supports semi-structured database system
+## Data Modal : Data is stored through means of predefined proper models.
+   Types:
+   - Record Based Data Model : 
+   - Object Based Data Model : 
+   

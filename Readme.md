@@ -51,5 +51,14 @@ Data is stored through means of predefined proper models.
   - Active On-Line Catalog : every database must have catalog table , info of every table should be stored in it.
   - Powerful Language :  ex. SQL
 ![all codd's rules](https://github.com/ompateldeveloper/learn-sql/assets/115335915/112ef8e4-2bfd-435f-9b9d-26f71d18ae91)
+## RDBMS languages
+  - Oracle
+  - Microsoft SQL server
+  - MySQL
+  - IBM-DB2
+  - Sybase
+  - Postgres SQL
+## SQL Command set
+![SQL command set](https://github.com/ompateldeveloper/learn-sql/assets/115335915/4e18efeb-a88a-4c57-b082-75bb8d40ef44)
 
-   
+

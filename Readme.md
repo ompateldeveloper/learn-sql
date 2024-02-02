@@ -34,4 +34,14 @@ Data is stored through means of predefined proper models.
 3. Attribute : Acolumn of Table
 4. Tuple : Row Of table
 ## Normalization in database
-   - 
+   1. 1st normal form:
+      - Each table has primary key
+      - All values should be atomic
+      - two columns should not store same info in same table
+   2. 2nd normal form
+      - 1st NF should be satisfied
+      - Nessccary redundent data should be moved to a Seperate table, These tables should be related to each other using Foregin Key
+   3. 3rd normal form:
+      - 2nd NF should be satisfied 
+      - eliminate fields which do not depend on primary key
+   

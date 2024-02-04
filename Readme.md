@@ -68,6 +68,9 @@ Data is stored through means of predefined proper models.
 - long : Max length of 2GB
 ## Commands in SQL 
   1. DCL
+     - Connect with user: CONNECT username 
      - Create new User: CREATE USER username IDENTIFIED BY password.
      - Granting permission to a User: GRANT CONNECT,RESOURCES,DBA TO username.
+     - See current user : SHOW USER
+     - 
      

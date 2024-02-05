@@ -111,7 +111,7 @@ Data is stored through means of predefined proper models.
    5. Not Null : Ensures column cannot have null values.
    6. 
 ## Built in functions: 
-   1. Between :
-   2. Like :
-   3. In :
+   1. Between : This checks if row are are between values given , syntax: SELECT * FROM songs WHERE id BETWEEN 2 AND 5.
+   2. Like : Check rows which are like that given value, syntax: SELECT * FROM songs WHERE TITLE LIKE 'U%'
+   3. In : This checks for rows which has values given inside in block, syntax: 
    4. Not In :

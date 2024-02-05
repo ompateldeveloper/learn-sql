@@ -72,13 +72,16 @@ Data is stored through means of predefined proper models.
      - Create new User: CREATE USER username IDENTIFIED BY password;
      - Granting permission to a User: GRANT CONNECT,RESOURCES,DBA TO username;
      - See current user : SHOW USER;
-     - see all tables :  SELECT * FROM tab
-     - see scehma of table  :  desc songs
-   2. DCL
-      - select all columns from table : SELECT * FROM songs
-      - select columns from table : SELECT id,title FROM songs
+       
+   2. DDL
       - create table : CREATE TABLE songs(column type,....);
       - alter a table : ALTER TABLE songs ADD album VARCHAR2(30);
-      - for running previous command : /
-
+        
    3.DML 
+      - select columns from table : SELECT id,title FROM songs
+      - select all columns from table : SELECT * FROM songs
+      
+   5.Other commands
+      - see all tables :  SELECT * FROM tab
+      - for running previous command : /
+      - see scehma of table  :  desc songs

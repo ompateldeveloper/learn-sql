@@ -81,8 +81,7 @@ Data is stored through means of predefined proper models.
       - drop a table : DROP TABLE songs
         
    3. DML
-      - 
-      1. DQL :
+      - 1. DQL :
          - select all columns from table : SELECT * FROM songs
          - select columns from table : SELECT id,title FROM songs 
       

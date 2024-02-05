@@ -80,8 +80,12 @@ Data is stored through means of predefined proper models.
    3. DML 
       - select columns from table : SELECT id,title FROM songs
       - select all columns from table : SELECT * FROM songs
-      
-   4. Other commands
+   4. TCL
+      - To commit changes ( like a savepoint ) : COMMIT commitname;
+      - To rollback any commits : ROLLBACK commitname
+        `Note: you need to create commit in order to rollback , this is good practice before doing any harmful actions such as delete ot truncate etc it rollbacks any updation to previous commit.`
+        
+   6. Other commands
       - see all tables :  SELECT * FROM tab
       - for running previous command : /
       - see scehma of table  :  desc songs

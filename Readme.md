@@ -110,4 +110,8 @@ Data is stored through means of predefined proper models.
    4. Check : checks that condition which was provided while creating . syntax: CHECK (columnname > 0).
    5. Not Null : Ensures column cannot have null values.
    6. 
-  
+## Built in functions: 
+   1. Between :
+   2. Like :
+   3. In :
+   4. Not In :

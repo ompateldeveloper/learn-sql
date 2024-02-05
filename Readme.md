@@ -77,11 +77,11 @@ Data is stored through means of predefined proper models.
       - create table : CREATE TABLE songs(column type,....);
       - alter a table : ALTER TABLE songs ADD album VARCHAR2(30);
         
-   3.DML 
+   3. DML 
       - select columns from table : SELECT id,title FROM songs
       - select all columns from table : SELECT * FROM songs
       
-   5.Other commands
+   4. Other commands
       - see all tables :  SELECT * FROM tab
       - for running previous command : /
       - see scehma of table  :  desc songs

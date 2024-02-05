@@ -72,17 +72,23 @@ Data is stored through means of predefined proper models.
      - Create new User: CREATE USER username IDENTIFIED BY password;
      - Granting permission to a User: GRANT CONNECT,RESOURCES,DBA TO username;
      - See current user : SHOW USER;
+     - granting a user permission in table : GRANT ALL ON songs TO user2;
+     - revoking a user permission in table : REVOKE ALL ON songs FROM user2;
        
    2. DDL
       - create table : CREATE TABLE songs(column type,....);
       - alter a table : ALTER TABLE songs ADD album VARCHAR2(30);
+      - alter a table : ALTER TABLE songs MODIFY artist VARCHAR2(40);
+      - drop a table : DROP TABLE songs
         
    3. DML 
       - select columns from table : SELECT id,title FROM songs
       - select all columns from table : SELECT * FROM songs
    4. TCL
       - To commit changes ( like a savepoint ) : COMMIT commitname;
+      - to create savepoint : SAVEPOINT savepointname
       - To rollback any commits : ROLLBACK commitname
+      - To rollback any savepoint : ROLLBACK TO savepointname
         `Note: you need to create commit in order to rollback , this is good practice before doing any harmful actions such as delete ot truncate etc it rollbacks any updation to previous commit.`
         
    6. Other commands

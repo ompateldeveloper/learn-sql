@@ -68,9 +68,17 @@ Data is stored through means of predefined proper models.
 - long : Max length of 2GB
 ## Commands in SQL 
   1. DCL
-     - Connect with user: CONNECT username 
-     - Create new User: CREATE USER username IDENTIFIED BY password.
-     - Granting permission to a User: GRANT CONNECT,RESOURCES,DBA TO username.
-     - See current user : SHOW USER
-     - 
-     
+     - Connect with user: CONNECT username;
+     - Create new User: CREATE USER username IDENTIFIED BY password;
+     - Granting permission to a User: GRANT CONNECT,RESOURCES,DBA TO username;
+     - See current user : SHOW USER;
+     - see all tables :  SELECT * FROM tab
+     - see scehma of table  :  desc songs
+   2. DCL
+     - select all columns from table : SELECT * FROM songs
+     - select columns from table : SELECT id,title FROM songs
+     - create table : CREATE TABLE songs(column type,....);
+     - alter a table : ALTER TABLE songs ADD album VARCHAR2(30);
+     - for running previous command : /
+
+   3.DML 

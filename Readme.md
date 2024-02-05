@@ -67,25 +67,32 @@ Data is stored through means of predefined proper models.
 - Date : it accepts Date data type in format dd/mm/yy from 1-jan-4712ad to 31-dec-4712ad
 - long : Max length of 2GB
 ## Commands in SQL 
-   1. DCL
+   1. DCL (Data Control Language)
       - Connect with user: CONNECT username;
       - Create new User: CREATE USER username IDENTIFIED BY password;
       - Granting permission to a User: GRANT CONNECT,RESOURCES,DBA TO username;
       - See current user : SHOW USER;
       - granting a user permission in table : GRANT ALL ON songs TO user2;
       - revoking a user permission in table : REVOKE ALL ON songs FROM user2;
-   2. DDL
+   2. DDL (Data Definition Language)
       - create table : CREATE TABLE songs(column type,....);
       - alter a table : ALTER TABLE songs ADD album VARCHAR2(30);
       - alter a table : ALTER TABLE songs MODIFY artist VARCHAR2(40);
       - drop a table : DROP TABLE songs
+      - create a index : CREATE INDEX index_name ON table_name (column1, column2, ...);
+      - 
         
-   3. DML
+   3. DML (Data Manipulation Language)
+      - insert a row in table :  INSERT INTO songs (id, title, album, artist) VALUES (1, 'unity', 'alanxunity', 'alan walker'); `Note: you can ignore table column names if we know it already ex. INSERT INTO songs VALUES (1, 'unity', 'alanxunity', 'alan walker'); . `
+      - insert a row in table (dynamic values) :  INSERT INTO songs VALUES (&id, '&title', '&album', '&artist');
+      - update a value in row : UPDATE songs SET album = 'unity' WHERE id = 1;
+      - Delete a row in table : DELETE FROM songs WHERE id = 1;
+      - 
       - 1. DQL :
          - select all columns from table : SELECT * FROM songs
          - select columns from table : SELECT id,title FROM songs 
       
-   5. TCL
+   5. TCL (Transaction Control Language)
       - To commit changes ( like a savepoint ) : COMMIT commitname;
       - to create savepoint : SAVEPOINT savepointname
       - To rollback any commits : ROLLBACK commitname
@@ -96,4 +103,11 @@ Data is stored through means of predefined proper models.
       - see all tables :  SELECT * FROM tab
       - for running previous command : /
       - see scehma of table  :  desc songs
-      - 
+## Constraints of columns :
+   1. Primary Key : Ensures that a column (or a combination of columns) uniquely identifies each row in a table.
+   2. Foreign Key : Establishes a link between two tables by referencing the primary key of one table in another table.
+   3. Unique : Ensures that each row is unique
+   4. Check : checks that condition which was provided while creating . syntax: CHECK (columnname > 0).
+   5. Not Null : Ensures column cannot have null values.
+   6. 
+  

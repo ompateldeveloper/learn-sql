@@ -62,9 +62,11 @@ Data is stored through means of predefined proper models.
 ![SQL command set](https://github.com/ompateldeveloper/learn-sql/assets/115335915/4e18efeb-a88a-4c57-b082-75bb8d40ef44)
 ### Data Types in oracle 
 - number : 1-32 digits
+  - int : accepts intiger values
+  - real :  accepts float values
 - char : alphanumeric 1-2000 characters
 - varchar2 : alphanumeric , 1-4000 characters
-- Date : it accepts Date data type in format dd/mm/yy from 1-jan-4712ad to 31-dec-4712ad
+- Date : it accepts Date data type in format dd/mon/yy from 1-jan-4712ad to 31-dec-4712ad
 - long : Max length of 2GB
 ## Commands in SQL 
    1. DCL (Data Control Language)
@@ -110,8 +112,38 @@ Data is stored through means of predefined proper models.
    4. Check : checks that condition which was provided while creating . syntax: CHECK (columnname > 0).
    5. Not Null : Ensures column cannot have null values.
    6. 
+      
 ## Built in functions: 
-   1. Between : This checks if row are are between values given , syntax: SELECT * FROM songs WHERE id BETWEEN 2 AND 5.
-   2. Like : Check rows which are like that given value, syntax: SELECT * FROM songs WHERE TITLE LIKE 'U%'
-   3. In : This checks for rows which has values given inside in block, syntax: 
-   4. Not In :
+
+   1. Between : This checks if row are are between values given , syntax: SELECT * FROM songs WHERE id BETWEEN 2 AND 5;
+   2. Like : Check rows which are like that given value, syntax: SELECT * FROM songs WHERE TITLE LIKE 'U%';
+   3. In : This checks for rows which has values given inside in block, syntax: SELECT * FROM songs WHERE ;
+   4. Not In : it just negation of in function
+   -----------> String 
+   5. Concat : concatinates ( joins ) 2 strings, simple!, syntax: SELECT CONCAT(title, '-', artist ) AS displayname FROM songs;
+   6. Substring : return a substring of givenstring , syntax: SELECT SUBSTRING(title, 1, 3) AS slug FROM songs;
+   7. Upper & Lower : These functions return uppercase/lowercase of input string , syntax: SELECT UPPER(title) AS search_list FROM songs;
+   -----------> Number 
+   8. Sum, Avg, Min, Max : Thse functions sums given numbers,Finds average of numbers, Finds minimum among numbers , and Maximum respectively, syntax : SELECT SUM(runtime) FROM songs;
+   9. Round : this function rounds the numerical values , synatx :  SELECT ROUND(runtime, 2) AS runtime FROM songs;
+   10. Abs : returns absolute value of number , synatx : SELECT ABS(-5) AS absolute_value;
+   ----------->  Date
+   11. Getdate : Gets system date where database is , syntax : SELECT GETDATE() as today;
+   12. Datediff : Finds difference between date , synatx : SELECT DATEDIFF(YEAR, birthdate, GETDATE()) AS age FROM artists;
+   13. Dateadd : Adds 2 dates , synatx: SELECT DATEADD(MONTH, 3, order_date) AS new_order_date FROM orders;
+   ----------->  Aggrigate
+   14. Count : operates over set of values and return count of these values , synatx: SELECT COUNT(id) from songs;
+   15. Group By : operates over set of values and return grouped table, synatx : SELECT artist, Count(title) AS songs_from_artist FROM songs GROUP BY artist;
+   ----------->  Logical
+   16. Case : switch case in SQL , syntax:
+       ```
+          SELECT
+             CASE
+                WHEN age < 18 THEN 'Minor'
+                   ELSE 'Adult'
+                END AS age_group
+          FROM persons;
+       ```
+
+
+

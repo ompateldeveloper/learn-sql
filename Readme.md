@@ -119,7 +119,7 @@ Data is stored through means of predefined proper models.
    4. Check : checks that condition which was provided while creating . syntax: CHECK (columnname > 0).
    5. Not Null : Ensures column cannot have null values.
 
-## Operators in SQl: [lin](https://www.w3schools.com/sql/sql_operators.asp)
+## Operators in SQl: [link](https://www.w3schools.com/sql/sql_operators.asp)
 ## Built in functions: 
    -----------> String 
    5. Concat : concatinates ( joins ) 2 strings, simple!, syntax: ```SELECT CONCAT(title, '-', artist ) AS displayname FROM songs;```
@@ -158,11 +158,6 @@ Data is stored through means of predefined proper models.
       CYCLE;
       ```
    3. Synonym : creates duplicate table from a table , synatx : ``` CREATE SYNONYM synname FOR songs; ``` , `Note 1: changes in synonyms reflect in original table `, `Note 2: you can use PUBLIC keyword to make synonym which are globally available`
-   4. View : Creates a duplicate of table from table but unlike synonym it can use conditions, synatx: ```CREATE OR REPLACE VIEW v1 AS SELECT * FROM songs WHERE album LIKE 'A%' ```
+   4. View : Creates a duplicate of table from table but unlike synonym it can use conditions, we can create joined view as well which uses 2 tables , synatx: ```CREATE OR REPLACE VIEW v1 AS SELECT * FROM songs WHERE album LIKE 'A%' ```
    `Note: You can forcefull create a view which does not exist by using FORCE but it'll throw warning , ex ``` CREATE FORCE VIEW v2 AS SELECT FROM geners;``` , later if you decide to create generes table you can update view using ```ALTER VIEW v2 COMPILE;``` `
-   5. Index : Indexes create indexing over a table for faster access , syntax : ```CREATE INDEX search_songs_id ON songs(id);```
-
-
-
-
-
+   5. Index : Indexes create indexing over a table for faster access , syntax : ```CREATE INDEX search_songs_id ON songs(id);``` , when index is created over multiple columns its called compound index other wise its simple index , you can also use `REVERSE` keyword to create reverse key index, indexes are created by default on primary key constraint.

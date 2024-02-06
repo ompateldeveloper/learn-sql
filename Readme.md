@@ -68,6 +68,13 @@ Data is stored through means of predefined proper models.
 - varchar2 : alphanumeric , 1-4000 characters
 - Date : it accepts Date data type in format dd/mon/yy from 1-jan-4712ad to 31-dec-4712ad
 - long : Max length of 2GB
+- LOB (Large Objects) :
+   - BLOB (Binary Large Objects) : binary data is stored
+   - CLOB (Charchter Large Objects) Charchter data is stored
+   - BFILE (Binary File) : It stored binary file
+- Raw : Raw data
+- Long Raw : Long raw data
+  
 ## Commands in SQL 
    1. DCL (Data Control Language)
       - Connect with user: CONNECT username;
@@ -115,14 +122,14 @@ Data is stored through means of predefined proper models.
       
 ## Built in functions: 
 
-   1. Between : This checks if row are are between values given , syntax: SELECT * FROM songs WHERE id BETWEEN 2 AND 5;
-   2. Like : Check rows which are like that given value, syntax: SELECT * FROM songs WHERE TITLE LIKE 'U%';
-   3. In : This checks for rows which has values given inside in block, syntax: SELECT * FROM songs WHERE ;
+   1. Between : This checks if row are are between values given , syntax: ```SELECT * FROM songs WHERE id BETWEEN 2 AND 5;```
+   2. Like : Check rows which are like that given value, syntax: ```SELECT * FROM songs WHERE TITLE LIKE 'U%';```
+   3. In : This checks for rows which has values given inside in block, syntax: ```SELECT * FROM songs WHERE ;```
    4. Not In : it just negation of in function
    -----------> String 
-   5. Concat : concatinates ( joins ) 2 strings, simple!, syntax: SELECT CONCAT(title, '-', artist ) AS displayname FROM songs;
-   6. Substring : return a substring of givenstring , syntax: SELECT SUBSTRING(title, 1, 3) AS slug FROM songs;
-   7. Upper & Lower : These functions return uppercase/lowercase of input string , syntax: SELECT UPPER(title) AS search_list FROM songs;
+   5. Concat : concatinates ( joins ) 2 strings, simple!, syntax: ```SELECT CONCAT(title, '-', artist ) AS displayname FROM songs;```
+   6. Substring : return a substring of givenstring , syntax: ```SELECT SUBSTRING(title, 1, 3) AS slug FROM songs;```
+   7. Upper & Lower : These functions return uppercase/lowercase of input string , syntax: ```SELECT UPPER(title) AS search_list FROM songs;```
    -----------> Number 
    8. Sum, Avg, Min, Max : Thse functions sums given numbers,Finds average of numbers, Finds minimum among numbers , and Maximum respectively, syntax : SELECT SUM(runtime) FROM songs;
    9. Round : this function rounds the numerical values , synatx :  SELECT ROUND(runtime, 2) AS runtime FROM songs;
@@ -144,6 +151,22 @@ Data is stored through means of predefined proper models.
                 END AS age_group
           FROM persons;
        ```
+   17. coalese : Returns the first non-null expression in the list. synatx:  SELECT COALESCE(null_column, 'Default') AS result FROM example_table;
+## other Utilities in SQL : 
+   1. Sequence : It geneartes unique neumeric values , its is equivalent to autoincrement in other databases,
+      syntax:
+      ```
+      CREATE SEQUENCE my_sequence
+      START WITH 1
+      INCREMENT BY 1
+      MAXVALUE 1000
+      CYCLE;
+      ```
+   3. Synonym : creates duplicate table from a table , synatx : ``` CREATE SYNONYM synname FOR songs; ```
+   4. View :
+   5. Index : 
+
+
 
 
 

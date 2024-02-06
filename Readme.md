@@ -119,13 +119,7 @@ Data is stored through means of predefined proper models.
    4. Check : checks that condition which was provided while creating . syntax: CHECK (columnname > 0).
    5. Not Null : Ensures column cannot have null values.
 
-## Operators in SQl:
-   for other operators use this (link)[https://www.w3schools.com/sql/sql_operators.asp] 
-   ------------> Special
-   1. Between : This checks if row are are between values given , syntax: ```SELECT * FROM songs WHERE id BETWEEN 2 AND 5;```
-   2. Like : Check rows which are like that given value, syntax: ```SELECT * FROM songs WHERE TITLE LIKE 'U%';```
-   3. In : This checks for rows which has values given inside in block, syntax: ```SELECT * FROM songs WHERE ;```
-   4. Not In : it just negation of in function
+## Operators in SQl: [lin](https://www.w3schools.com/sql/sql_operators.asp)
 ## Built in functions: 
    -----------> String 
    5. Concat : concatinates ( joins ) 2 strings, simple!, syntax: ```SELECT CONCAT(title, '-', artist ) AS displayname FROM songs;```

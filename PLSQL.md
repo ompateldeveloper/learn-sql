@@ -125,4 +125,6 @@ There are 2 types of stored procidure:
     END;
     /
   ```
+## Packages:
+Package combine functions and procidures into a package , oracle provides us with built-in packages for ex. DBMS_OUTPUT
 

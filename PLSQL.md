@@ -25,11 +25,13 @@ v_varible2 songs.id%type -- uses type from a table's column
 - to assign value :
 ```
 v_variable1 := 1;
--- or you can assign variable using select over a tabl;e as well
+-- or you can assign variable using select over a table as well
 SELECT id INTO v_varible2 FROM songs WHERE title LIKE 'unity';
+-- id must return one value for his case
 
 ```
-- to print things over console
+- cursor : array equivalent in SQL
+- to print equivalent in SQL
 ```
 dbms_output.put_line('hello ' || variable1);
 ```
@@ -42,6 +44,26 @@ ELSEIF v_num1 > v_num2 THEN
 ElSE
 -- Else do this
 END IF;
+```
+- for loop in SQL
+```
+FOR record_variable IN cursor_name
+LOOP
+  -- Process the values retrieved from the cursor
+END LOOP;
+```
+- open : while loop equivalent in SQL
+```
+OPEN cursor_name;
+
+LOOP
+  FETCH cursor_name INTO variables;
+  EXIT WHEN cursor_name%NOTFOUND;
+
+  -- Process the values retrieved from the cursor
+END LOOP;
+
+CLOSE cursor_name;
 ```
 - raising error in SQL
 ```
@@ -62,6 +84,29 @@ There are 2 types of stored procidure:
 2. FUNCTION
 - PROCIDURE :
   ```
+  CREATE OR REPLACE PROCEDURE procedure_name(
+      p_param1 IN number, -- IN is basically const,
+      p_param2 IN table.column%type,
+      p_param3 OUT table.column%type; -- OUT is basically let,
+      p_param4 IN OUT table.column%type; -- OUT is basically let
+  )
+  AS
+  BEGIN
+      -- SQL statements go here
+      DBMS_OUTPUT.PUT_LINE('Hello from my procedure!' || p_param1 || p_param2 );
+  END procedure_name;
   
   ```
-- 
+- FUNCTION :
+  ```
+    CREATE OR REPLACE FUNCTION add_function ( f_v1 NUMBER, f_v2 NUMBER )
+    RETURN NUMBER
+    AS
+    v_out NUMBER;
+    BEGIN
+        v_out:= f_v1 * f_v2;
+        RETURN v_out;
+    END;
+    /
+  ```
+

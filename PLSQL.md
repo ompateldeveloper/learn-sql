@@ -30,7 +30,22 @@ SELECT id INTO v_varible2 FROM songs WHERE title LIKE 'unity';
 -- id must return one value for his case
 
 ```
-- cursor : array equivalent in SQL
+- cursor : array equivalent in SQL, there are 2 types of cursor imoplicit and explicit , using INTO with SELECT created implicit cursor but it hold only 1 value, explicit cursors are as follows :
+```
+DECLARE
+  CURSOR song_cursor IS
+    SELECT id, title
+    FROM songs
+    WHERE artist_id = 1;
+BEGIN
+  FOR song_data IN song_cursor
+  LOOP
+    -- Process the result
+    DBMS_OUTPUT.PUT_LINE('songs are with artist 1 are ' song_data.);
+  END LOOP;
+END;
+/
+```
 - to print equivalent in SQL
 ```
 dbms_output.put_line('hello ' || variable1);

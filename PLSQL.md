@@ -37,11 +37,12 @@ DECLARE
     SELECT id, title
     FROM songs
     WHERE artist_id = 1;
+  song_data song_cursor%ROWTYPE;
 BEGIN
   FOR song_data IN song_cursor
   LOOP
     -- Process the result
-    DBMS_OUTPUT.PUT_LINE('songs are with artist 1 are ' || song_data.);
+    DBMS_OUTPUT.PUT_LINE('songs are with artist 1 are ' || song_data.title);
   END LOOP;
 END;
 /

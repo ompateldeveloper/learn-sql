@@ -147,6 +147,25 @@ Data is stored through means of predefined proper models.
           FROM persons;
        ```
    17. coalese : Returns the first non-null expression in the list. synatx:  ```SELECT COALESCE(null_column, 'Default') AS result FROM example_table;```
+## relations in sql:
+types:
+   - one-to-one : one row is realted to one row in parent table
+   - one-to-many : one row in table is realted to two or more rows in parent table
+   - many-to-many : many rows in table is related to many rows in prent table
+for creating refernces we use keyword REFERENCES :
+1. method 1:
+```
+CREATE TABLE b ( bid number primary key, bname varchar2(20) );
+CREATE TABLE a ( aid NUMBER PRIMARY KEY, bid NUMBER REFERENCES b(bid), aname VARCHAR2(20) );
+```
+2. method 2:
+```
+CREATE TABLE b ( bid number primary key, bname varchar2(20) );
+CREATE TABLE a ( aid NUMBER PRIMARY KEY, bid NUMBER, aname VARCHAR2(20),FOREIGN KEY (bid) REFRENCES b(bid));
+
+
+```
+  
 ## other Utilities in SQL : 
    1. Sequence : It geneartes unique neumeric values , its is equivalent to autoincrement in other databases,
       syntax:
